@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {Button, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Button,
+  Modal,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import DatePicker from 'react-native-date-picker';
 const weekday = [
   'Sunday',
@@ -16,15 +23,17 @@ const DateTwo = prop => {
   const [open, setOpen] = useState(false);
   return (
     <View style={styles.container}>
-      <View style={styles.subContainer}>
-        <Text style={{fontSize:15}}>{weekday.at(date.getDay())}</Text>
-      </View>
-     <TouchableOpacity onPress={()=>setOpen(true)} >
-       <Text style={styles.subContainer}> {`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}</Text>
-     </TouchableOpacity>
+      <TouchableOpacity style={styles.dayCon} onPress={() => setOpen(true)}>
+        <Text>{weekday.at(date.getDay())}</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => setOpen(true)} style={styles.dateCon}>
+        <Text>
+          {' '}
+          {`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}
+        </Text>
+      </TouchableOpacity>
       <DatePicker
         modal
-        style={styles.subContainer}
         mode={'date'}
         open={open}
         date={date}
@@ -48,19 +57,24 @@ const styles = StyleSheet.create({
     display: 'flex',
     //marginTop: 34,
     // marginHorizontal: 4,
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    //justifyContent: 'center',
     //backgroundColor: 'pink',
     flexDirection: 'row',
     //marginTop: 34,
     //marginHorizontal: 4,
     marginHorizontal: 20,
-   
   },
-  subContainer: {
+  dayCon: {
     flex: 1,
     //flexDirection:''
-    fontSize:15
+    fontSize: 15,
+  },
+  dateCon: {
+    flex: 1,
+    //flexDirection:''
+    fontSize: 15,
+    alignItems: 'flex-end',
   },
 });
 
