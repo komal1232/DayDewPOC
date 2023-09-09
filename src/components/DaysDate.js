@@ -10,6 +10,7 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
+import DatePicker from 'react-native-date-picker';
 const screenWidth = Dimensions.get('window').width;
 
 // const  DaysOptions = [
