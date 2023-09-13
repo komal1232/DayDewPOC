@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {Button, Modal, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Button,
+  Modal,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import DatePicker from 'react-native-date-picker';
 const weekday = [
   'Sunday',
@@ -11,22 +18,22 @@ const weekday = [
   'Saturday',
 ];
 
-const DateTwo = prop => {
+const DateComp = prop => {
   const [date, setDate] = useState(new Date());
   const [open, setOpen] = useState(false);
   return (
     <View style={styles.container}>
-      <TouchableOpacity 
-      style={styles.dayCon} 
-      onPress={()=>setOpen(true)}
-       >
-        <Text style ={{fontSize:20}} >{weekday.at(date.getDay())}</Text>
+      <TouchableOpacity style={styles.dayCon} onPress={() => setOpen(true)}>
+        <Text style={{fontSize: 20}}>{weekday.at(date.getDay())}</Text>
       </TouchableOpacity>
-     <TouchableOpacity onPress={()=>setOpen(true)}  style={styles.dateCon} >
-       <Text style ={{fontSize:20}}> {`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}</Text>
-     </TouchableOpacity>
+      <TouchableOpacity onPress={() => setOpen(true)} style={styles.dateCon}>
+        <Text style={{fontSize: 20}}>
+          {' '}
+          {`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}
+        </Text>
+      </TouchableOpacity>
       <DatePicker
-      modal
+        modal
         mode={'date'}
         open={open}
         date={date}
@@ -48,16 +55,15 @@ const DateTwo = prop => {
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 20,
-   
   },
   dayCon: {
-    alignItems:'flex-end',
-    fontSize:15
+    alignItems: 'flex-end',
+    fontSize: 15,
   },
   dateCon: {
-    alignItems:'flex-end',
-    fontSize:15,
+    alignItems: 'flex-end',
+    fontSize: 15,
   },
 });
 
-export default DateTwo;
+export default DateComp;
