@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {View, Text, TextInput, StyleSheet, Dimensions, TouchableOpacity} from 'react-native';
+import {View, Text, TextInput, StyleSheet, Dimensions, TouchableOpacity, ScrollView} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import CheckBoxText from './CheckBoxText';
-import constants from '../utils/constants';
+import {INPUT_CONTAINER_MARGIN,INPUT_CONTAINER_PADDING ,APP_CONTAINER_MARGIN_HORIZONTAL} from '../utils/constants';
 import  PlusIcon from '../svgComp/PlusIcon'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 const screenWidth = Dimensions.get('screen').width;
 const screenHeight = Dimensions.get('screen').height;
 const windowWidth = Dimensions.get('window').width;
@@ -54,14 +55,11 @@ const Input = props => {
 };
 const styles = StyleSheet.create({
   container: {
-    //display: 'flex',
-    //flex: 1,
-    width:(screenWidth-2*constants.APP_CONTAINER_MARGIN_HORIZONTAL-4*constants.INPUT_CONTAINER_MARGIN)/2,
-    height:200,
+    width:(screenWidth-2*APP_CONTAINER_MARGIN_HORIZONTAL-2*INPUT_CONTAINER_MARGIN),
     backgroundColor: '#FEFFE1',
     borderRadius: 3,
-    margin: constants.INPUT_CONTAINER_MARGIN,
-    padding: constants.INPUT_CONTAINER_PADDING,
+    margin: INPUT_CONTAINER_MARGIN,
+    padding:INPUT_CONTAINER_PADDING,
     borderWidth: 2,
     borderColor: '#797B4B',
   },

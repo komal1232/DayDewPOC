@@ -47,30 +47,16 @@ const DateTwo = prop => {
 
 const styles = StyleSheet.create({
   container: {
-    //display: 'flex',
-    //marginTop: 34,
-    // marginHorizontal: 4,
-   // alignItems: 'center',
-    //justifyContent: 'center',
-    //backgroundColor: 'pink',
-    //flexDirection: 'row',
-    //marginTop: 34,
-    //marginHorizontal: 4,
     marginHorizontal: 20,
    
   },
   dayCon: {
-   // flex: 1,
-    //flexDirection:''
     alignItems:'flex-end',
     fontSize:15
   },
   dateCon: {
-   // flex: 1,
-    //flexDirection:''
     alignItems:'flex-end',
     fontSize:15,
-    //alignItems:'flex-end'
   },
 });
 
