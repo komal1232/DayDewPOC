@@ -1,12 +1,5 @@
 import React, {useState} from 'react';
-import {
-  Button,
-  Modal,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Button, Modal, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import DatePicker from 'react-native-date-picker';
 const weekday = [
   'Sunday',
@@ -23,17 +16,17 @@ const DateTwo = prop => {
   const [open, setOpen] = useState(false);
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.dayCon} onPress={() => setOpen(true)}>
-        <Text>{weekday.at(date.getDay())}</Text>
+      <TouchableOpacity 
+      style={styles.dayCon} 
+      onPress={()=>setOpen(true)}
+       >
+        <Text style ={{fontSize:20}} >{weekday.at(date.getDay())}</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => setOpen(true)} style={styles.dateCon}>
-        <Text>
-          {' '}
-          {`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}
-        </Text>
-      </TouchableOpacity>
+     <TouchableOpacity onPress={()=>setOpen(true)}  style={styles.dateCon} >
+       <Text style ={{fontSize:20}}> {`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}</Text>
+     </TouchableOpacity>
       <DatePicker
-        modal
+      modal
         mode={'date'}
         open={open}
         date={date}
@@ -54,27 +47,30 @@ const DateTwo = prop => {
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
+    //display: 'flex',
     //marginTop: 34,
     // marginHorizontal: 4,
-    // alignItems: 'center',
+   // alignItems: 'center',
     //justifyContent: 'center',
     //backgroundColor: 'pink',
-    flexDirection: 'row',
+    //flexDirection: 'row',
     //marginTop: 34,
     //marginHorizontal: 4,
     marginHorizontal: 20,
+   
   },
   dayCon: {
-    flex: 1,
+   // flex: 1,
     //flexDirection:''
-    fontSize: 15,
+    alignItems:'flex-end',
+    fontSize:15
   },
   dateCon: {
-    flex: 1,
+   // flex: 1,
     //flexDirection:''
-    fontSize: 15,
-    alignItems: 'flex-end',
+    alignItems:'flex-end',
+    fontSize:15,
+    //alignItems:'flex-end'
   },
 });
 

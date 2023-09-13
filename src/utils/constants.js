@@ -1,0 +1,8 @@
+const constants = {
+    INPUT_CONTAINER_MARGIN:5,
+    INPUT_CONTAINER_PADDING:10,
+    APP_CONTAINER_MARGIN_HORIZONTAL:4,
+    APP_CONTAINER_MARGIN_TOP:45
+};
+
+export default constants
