@@ -5,7 +5,7 @@ import Input from './Input';
 const InputContainer = prop => {
   return (
     <>
-       <Input title ="To Do List"/>
+       <Input title ="To Do List" type = "inputBox"/>
       <View style={styles.inputRow}>
         <Input title ="Exercise" showPLus ={false}/>
         <Input  title ="Food to eat" showPLus ={false}/>
@@ -15,10 +15,13 @@ const InputContainer = prop => {
         <Input title ="Night Routin" showPLus ={false}/>
         <Input  title ="Habit" showPLus ={false}/>
       </View>
-        <Input  title ="Health"/>
-        <Input  title ="Call/Email"/>
+    
+        <Input  title ="Water" type ="water"/>
+        <View style={styles.inputRow}>
+        <Input  title ="Mood" type = "mood"/>
 
         <Input  title ="Personal"/>
+        </View>
         <Input title ="To Do List" />
     </>
   );

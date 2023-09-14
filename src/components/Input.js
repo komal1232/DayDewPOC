@@ -18,7 +18,12 @@ import {
 import PlusIcon from '../svgComp/PlusIcon';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import InputBox from './Inputbox';
+import WaterDrop from '../svgComp/WaterDrop';
+import DropLet from '../svgComp/DropLet';
+import WaterBox from './WaterBox';
 const screenWidth = Dimensions.get('screen').width;
+
+import Mood from '../components/Mood'
 // const screenHeight = Dimensions.get('screen').height;
 // const windowWidth = Dimensions.get('window').width;
 // const windowHeight = Dimensions.get('window').height;
@@ -34,10 +39,33 @@ const Input = props => {
     setComponentDimensions({width, height});
   };
 
+  const getComp = () =>{
+
+     switch(props.type){
+      case "inputBox" :
+         return <InputBox showPLus ={props.showPLus}  height={componentDimensions.height}
+          width={componentDimensions.width} title ={props.title}/>
+       break;
+
+       case "water" :
+        //#92D3F5 , #FFFFFF
+        return (
+         <WaterBox  height={componentDimensions.height}
+         width={componentDimensions.width} title ={props.title} />
+        )
+
+      case "mood" :
+        return (
+          <Mood title ={props.title}/>
+        )
+      default: return <Text>{"hii komal"}</Text>
+
+    }
+  }
+
   return (
     <View style={styles.container} onLayout={onLayout}>
-      <InputBox showPLus ={props.showPLus}     height={componentDimensions.height}
-          width={componentDimensions.width} title ={props.title}/>
+          {getComp()}
     </View>
   );
 };
@@ -58,7 +86,8 @@ const styles = StyleSheet.create({
 });
 
 Input.defaultProps = {
-  showPLus:true
+  showPLus:true,
+  type :"inputBox"
 }
 
 export default Input;

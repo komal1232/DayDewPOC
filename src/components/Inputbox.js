@@ -18,9 +18,9 @@ import {
 import PlusIcon from '../svgComp/PlusIcon';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 const screenWidth = Dimensions.get('screen').width;
-const screenHeight = Dimensions.get('screen').height;
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
+// const screenHeight = Dimensions.get('screen').height;
+// const windowWidth = Dimensions.get('window').width;
+// const windowHeight = Dimensions.get('window').height;
 const InputBox = (props) =>{
     const [text, setText] = useState('hii ');
     const [check, setCheck] = useState(false);
