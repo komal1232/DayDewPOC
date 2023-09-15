@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import { StyleSheet, Text, Dimensions, View } from 'react-native';
+import { StyleSheet, Text, Dimensions, View, ImageBackground } from 'react-native';
 import DateComp from './src/components/DateComp';
 import Input from './src/components/Input';
 import InputContainer from './src/components/InputContainer'
@@ -14,13 +14,15 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { APP_CONTAINER_MARGIN_HORIZONTAL, APP_CONTAINER_MARGIN_TOP } from './src/utils/constants';
 function App(): JSX.Element {
   return (
-    <View style={styles.container} >
-      <DateComp />
-      <KeyboardAwareScrollView>
-        <InputContainer />
-      </KeyboardAwareScrollView>
-
-    </View>
+    <View style ={{backgroundColor:"#f2e5d5"}}>
+      <View style={styles.container} >
+        <DateComp />
+        <KeyboardAwareScrollView>
+          <InputContainer />
+        </KeyboardAwareScrollView>
+  
+      </View>
+      </View>
   );
 }
 

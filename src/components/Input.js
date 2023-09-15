@@ -24,6 +24,7 @@ import WaterBox from './WaterBox';
 const screenWidth = Dimensions.get('screen').width;
 
 import Mood from '../components/Mood'
+import Food from './Food';
 // const screenHeight = Dimensions.get('screen').height;
 // const windowWidth = Dimensions.get('window').width;
 // const windowHeight = Dimensions.get('window').height;
@@ -57,6 +58,10 @@ const Input = props => {
       case "mood" :
         return (
           <Mood title ={props.title}/>
+        )
+      case "food" :
+        return (
+          <Food title ={props.title}/>
         )
       default: return <Text>{"hii komal"}</Text>
 
