@@ -14,6 +14,8 @@ import {
   INPUT_CONTAINER_MARGIN,
   INPUT_CONTAINER_PADDING,
   APP_CONTAINER_MARGIN_HORIZONTAL,
+  BORDER_COLOR,
+  INPUT_BACKGROUND_COLOR,
 } from '../utils/constants';
 import PlusIcon from '../svgComp/PlusIcon';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -80,12 +82,12 @@ const styles = StyleSheet.create({
     //   screenWidth -
     //   2 * APP_CONTAINER_MARGIN_HORIZONTAL -
     //   2 * INPUT_CONTAINER_MARGIN, 
-    backgroundColor: '#FEFFE1',  //'#F8FEFF
+    backgroundColor: INPUT_BACKGROUND_COLOR,  //'#F8FEFF
     borderRadius: 3,
     margin: INPUT_CONTAINER_MARGIN,
     padding: INPUT_CONTAINER_PADDING,
     borderWidth: 2,
-    borderColor: '#797B4B',  //#095561
+    borderColor: BORDER_COLOR,  //#095561
     flex:1
   },
 });

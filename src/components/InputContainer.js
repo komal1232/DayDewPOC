@@ -15,12 +15,13 @@ const InputContainer = prop => {
         <Input title ="Night Routin" showPLus ={false}/>
         <Input  title ="Habit" showPLus ={false}/>
       </View>
+      <Input title ="Food" type="food"/>
     
         <Input  title ="Water" type ="water"/>
         <View style={styles.inputRow}>
         <Input  title ="Mood" type = "mood"/>
 
-        <Input  title ="Personal"/>
+        <Input  title ="Personal" showPLus ={false}/>
         </View>
         <Input title ="To Do List" />
     </>

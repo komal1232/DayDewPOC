@@ -14,6 +14,9 @@ import {
   INPUT_CONTAINER_MARGIN,
   INPUT_CONTAINER_PADDING,
   APP_CONTAINER_MARGIN_HORIZONTAL,
+  BORDER_COLOR,
+  INPUT_BACKGROUND_COLOR,
+  TEXT_COLOR,
 } from '../utils/constants';
 import PlusIcon from '../svgComp/PlusIcon';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -50,8 +53,8 @@ const InputBox = (props) =>{
         style={{
           fontSize: 16,
           marginBottom: 4,
-          color: '#1D3C03',
-          textShadowColor: '#AEAFAC',
+          color: TEXT_COLOR,
+         // textShadowColor: '#AEAFAC',
           textShadowOffset: {width: 1, height: 1},
           textShadowRadius: 0,
         }}>
@@ -75,12 +78,12 @@ const styles = StyleSheet.create({
         screenWidth -
         2 * APP_CONTAINER_MARGIN_HORIZONTAL -
         2 * INPUT_CONTAINER_MARGIN,
-      backgroundColor: '#FEFFE1',
+      backgroundColor: INPUT_BACKGROUND_COLOR,
       borderRadius: 3,
       margin: INPUT_CONTAINER_MARGIN,
       padding: INPUT_CONTAINER_PADDING,
       borderWidth: 2,
-      borderColor: '#797B4B',
+      borderColor: BORDER_COLOR,
       flex:1
     },
     plusIcon: {

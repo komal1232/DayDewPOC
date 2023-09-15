@@ -17,7 +17,7 @@ function App(): JSX.Element {
     <View style ={{backgroundColor:"#f2e5d5"}}>
       <View style={styles.container} >
         <DateComp />
-        <KeyboardAwareScrollView>
+        <KeyboardAwareScrollView style={styles.keybord}>
           <InputContainer />
         </KeyboardAwareScrollView>
   
@@ -34,6 +34,11 @@ const styles = StyleSheet.create({
   container: {
     marginTop: APP_CONTAINER_MARGIN_TOP,
     marginHorizontal: APP_CONTAINER_MARGIN_HORIZONTAL,
+  },
+  keybord :{
+    borderRadius:10 // for view to be little curvy check in this
+    
+
   }
 });
 

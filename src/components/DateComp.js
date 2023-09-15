@@ -8,6 +8,7 @@ import {
   View,
 } from 'react-native';
 import DatePicker from 'react-native-date-picker';
+import CalendarPicker from 'react-native-calendar-picker';
 const weekday = [
   'Sunday',
   'Monday',
@@ -48,6 +49,9 @@ const DateComp = prop => {
         dateFormat="DD-MM-YYYY"
         // selected= {date}
       />
+      {/* <CalendarPicker /> */}
+      
+
     </View>
   );
 };

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, TextInput, StyleSheet, Dimensions} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
+import { BORDER_COLOR } from '../utils/constants';
 const screenWidth = Dimensions.get('screen').width;
 const screenHeight = Dimensions.get('screen').height;
 
@@ -12,8 +13,10 @@ const CheckBoxText = props => {
       <CheckBox
         value={check}
         onValueChange={e => setCheck(e)}
-        onCheckColor="black"
-        onTintColor="black"
+        // onCheckColor="black"
+        // onTintColor="black"
+        onCheckColor={BORDER_COLOR}
+        onTintColor={BORDER_COLOR}
         boxType="square"
         style={styles.checkBox}
       />
@@ -21,7 +24,8 @@ const CheckBoxText = props => {
         style={{
           width: props.width - 60,
           borderBottomWidth: 1,
-          borderColor: 'black',
+           borderColor: '#D9D9D6',
+          //borderColor: 'black',
           borderStyle: 'solid',
         }}>
         <TextInput value={text} onChangeText={e => setText(e)} />

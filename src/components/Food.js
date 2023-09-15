@@ -1,74 +1,64 @@
 import React from 'react';
 import {Dimensions, StyleSheet, Text, TextInput, View} from 'react-native';
+import { BORDER_COLOR, FOOD_TEXT_COLOR, TEXT_COLOR } from '../utils/constants';
 
 const Food = prop => {
+  const renderText = () => {
+    return <TextInput style={styles.textInput} multiline={true} />;
+  };
+
+  const renderVerticleLine = () => {
+    return <View style={styles.line}></View>;
+  };
+  const headingView = title => {
+    return (
+      <View style={styles.headingTestView}>
+        <Text style={styles.headingTest}>{title}</Text>
+      </View>
+    );
+  };
+
+  const horizontaLine = () => {
+    return <View style={styles.horizontaLine}></View>;
+  };
+  const renderHeading = () => {
+    return (
+      <View height={20} style={{display: 'flex', flexDirection: 'row', margin:-10}}>
+        {headingView('BREAKFAST')}
+        {/* {renderVerticleLine()} */}
+        {headingView('LUNCH')}
+        {/* {renderVerticleLine()} */}
+        {headingView('DINNER')}
+      </View>
+    );
+  };
+
+  const renderTextInput = () => {
+    return (
+      <View height={100} style={{display: 'flex', flexDirection: 'row'}}>
+        {renderText()}
+        {renderVerticleLine()}
+        {renderText()}
+        {renderVerticleLine()}
+        {renderText()}
+      </View>
+    );
+  };
   return (
     <>
-      <View height={20} style={{display: 'flex', flexDirection: 'row'}}>
-        <View style={styles.headingTestView}>
-        <Text style={styles.headingTest}>LUNCH</Text>
+      {renderHeading()}
+      {renderTextInput()}
 
-        </View>
-        <View style={styles.line}></View>
-        <View style={styles.headingTestView}>
-        <Text style={styles.headingTest}>LUNCH</Text>
-
-        </View>
-        <View style={styles.line}></View>
-        <View style={styles.headingTestView}>
-        <Text style={styles.headingTest}>LUNCH</Text>
-
-        </View>
-      </View>
-      <View height={100} style={{display: 'flex', flexDirection: 'row'}}>
-      <TextInput style={styles.headingTest} />
-      <View style={styles.line}></View>
-      <TextInput style={styles.headingTest} />
-      <View style={styles.line}></View>
-      <TextInput style={styles.headingTest} />
-
-      </View>
-
-
-
-      <View style={styles.verticalLine}></View>
+      {horizontaLine()}
       <Text style={styles.snackHeading}>SNACKS</Text>
       <TextInput
         style={[
           styles.textInput,
-          {width: '80%', alignSelf: 'center', marginTop: 0},
+          {width: '50%', alignSelf: 'center', marginTop: 0,height:25},
         ]}
+        multiline={true}
+        // numberOfLines={3}
       />
-
-
-
-
-      {/* <View style={styles.container}>
-        <View style={[styles.box, {alignItems: 'center'}]}>
-          <Text style={styles.headding}>BREAKFAST</Text>
-          <TextInput style={styles.textInput} />
-        </View>
-        <View style={styles.line}></View>
-
-        <View style={styles.box}>
-          <Text style={styles.headding}>LUNCH</Text>
-          <TextInput style={styles.textInput} />
-        </View>
-        <View style={styles.line}></View>
-
-        <View style={styles.box}>
-          <Text style={styles.headding}>DINNER</Text>
-          <TextInput style={styles.textInput} />
-        </View>
-      </View>
-      <View style={styles.verticalLine}></View>
-      <Text style={{marginTop: 1, alignSelf: 'center'}}>SNACKS</Text>
-      <TextInput
-        style={[
-          styles.textInput,
-          {width: '80%', alignSelf: 'center', marginTop: 0},
-        ]}
-      /> */}
     </>
   );
 };
@@ -80,39 +70,52 @@ const styles = StyleSheet.create({
     height: 100,
   },
   line: {
-    height: '100%', // or specify a fixed height like 100 or 200
     width: 1,
-    backgroundColor: 'black',
+    backgroundColor: TEXT_COLOR,
+    marginTop:10
+   
   },
-  verticalLine: {
-    width: '100%', // or specify a fixed height like 100 or 200
+  horizontaLine: {
+   // width: '105%', // or specify a fixed height like 100 or 200
     height: 1,
-    backgroundColor: 'black',
+    backgroundColor: TEXT_COLOR,
+    marginHorizontal:-10
   },
   box: {
     display: 'flex',
     flex: 1,
   },
   textInput: {
-    width: Dimensions.get('screen').width / 3 - 30,
-    borderColor: '#3c372e',
-    marginTop: 20,
+    textDecorationLine:'underline',
+    textDecorationColor:'#DADAD5',// @todo check this
+    margin:5,
     padding: 10,
+    flex: 1,
   },
   headding: {
     alignSelf: 'center',
     // marginHorizontal:10
   },
-  headingTest:{
-    flex:1,
-    alignItems:"center",
-},
-  headingTestView:{
-    alignItems:'center',
-    flex:1,
-    backgroundColor:"yellow"
+  headingTest: {
+    alignItems: 'center',
+    // width:"50%"
+    //color:"black",
+    color: FOOD_TEXT_COLOR
   },
-  snackHeading:{marginTop: -10, alignSelf: 'center',backgroundColor:"yellow"}
+  headingTestView: {
+    alignItems: 'center',
+    flex: 1,
+    //backgroundColor: 'black',
+   backgroundColor: BORDER_COLOR,
+  },
+  snackHeading: {
+    marginTop: -10,
+    alignSelf: 'center',
+    // backgroundColor: 'black',
+    backgroundColor: BORDER_COLOR,
+    color: FOOD_TEXT_COLOR,
+    padding:2,
+  },
 });
 
 export default Food;

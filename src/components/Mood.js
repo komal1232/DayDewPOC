@@ -67,6 +67,6 @@ const styles = StyleSheet.create({
   },
   moodStyle: {
     margin: 2.5,
-    opacity:0.5
+    opacity:0.3
   },
 });
