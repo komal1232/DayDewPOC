@@ -11,10 +11,10 @@ import DateComp from './src/components/DateComp';
 import Input from './src/components/Input';
 import InputContainer from './src/components/InputContainer'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { APP_CONTAINER_MARGIN_HORIZONTAL, APP_CONTAINER_MARGIN_TOP } from './src/utils/constants';
+import { APP_CONTAINER_MARGIN_HORIZONTAL, APP_CONTAINER_MARGIN_TOP, BACKGROUND_COLOR } from './src/utils/constants';
 function App(): JSX.Element {
   return (
-    <View style ={{backgroundColor:"#f2e5d5"}}>
+    <View style ={{backgroundColor:BACKGROUND_COLOR}}>
       <View style={styles.container} >
         <DateComp />
         <KeyboardAwareScrollView style={styles.keybord}>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     marginHorizontal: APP_CONTAINER_MARGIN_HORIZONTAL,
   },
   keybord :{
-    borderRadius:10 // for view to be little curvy check in this
+    borderRadius:10,// for view to be little curvy check in this
     
 
   }

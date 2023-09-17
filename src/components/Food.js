@@ -1,10 +1,10 @@
 import React from 'react';
 import {Dimensions, StyleSheet, Text, TextInput, View} from 'react-native';
-import { BORDER_COLOR, FOOD_TEXT_COLOR, TEXT_COLOR } from '../utils/constants';
+import { BORDER_COLOR, FOOD_TEXT_BACKGROUND, FOOD_TEXT_COLOR, TEXT_COLOR, TEXT_FONT_STYLE } from '../utils/constants';
 
 const Food = prop => {
   const renderText = () => {
-    return <TextInput style={styles.textInput} multiline={true} />;
+    return <TextInput style={[styles.textInput, {marginTop:20}]} multiline={true} />;
   };
 
   const renderVerticleLine = () => {
@@ -100,21 +100,25 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     // width:"50%"
     //color:"black",
-    color: FOOD_TEXT_COLOR
+    color: FOOD_TEXT_COLOR,
+    fontStyle:TEXT_FONT_STYLE
   },
   headingTestView: {
+   // justifyContent:'center',
     alignItems: 'center',
     flex: 1,
+    padding:3,
     //backgroundColor: 'black',
-   backgroundColor: BORDER_COLOR,
+   backgroundColor: FOOD_TEXT_BACKGROUND,
   },
   snackHeading: {
     marginTop: -10,
     alignSelf: 'center',
     // backgroundColor: 'black',
-    backgroundColor: BORDER_COLOR,
+    backgroundColor: FOOD_TEXT_BACKGROUND,
     color: FOOD_TEXT_COLOR,
-    padding:2,
+    padding:4,
+    fontStyle:TEXT_FONT_STYLE
   },
 });
 

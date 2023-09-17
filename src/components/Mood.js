@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import { MoodMap } from '../utils/componentMap';
+import { TEXT_FONT_STYLE } from '../utils/constants';
 const Moods = ["HappyFace","HappyFaceTwo","AngryFace","FlatFace","Sad","Awful"];
 
 const Mood = props => {
@@ -48,7 +49,7 @@ const Mood = props => {
  }
   return (
     <>
-      <Text>{props.title}</Text>
+      <Text style={{fontStyle:TEXT_FONT_STYLE}}>{props.title}</Text>
       <View style={styles.container}>
         {renderMoods()}
       </View>

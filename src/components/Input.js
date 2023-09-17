@@ -27,6 +27,10 @@ const screenWidth = Dimensions.get('screen').width;
 
 import Mood from '../components/Mood'
 import Food from './Food';
+import Notes from './Notes';
+import Habbit from './Habbit';
+import Sleep from './Sleep';
+import { Path, Svg } from 'react-native-svg';
 // const screenHeight = Dimensions.get('screen').height;
 // const windowWidth = Dimensions.get('window').width;
 // const windowHeight = Dimensions.get('window').height;
@@ -64,6 +68,19 @@ const Input = props => {
       case "food" :
         return (
           <Food title ={props.title}/>
+        )
+      case "notes":
+        return (
+          <Notes title={props.title}/>
+        )
+      case "edit":
+        return (
+          <Habbit showPLus ={props.showPLus}  height={componentDimensions.height}
+          width={componentDimensions.width} title ={props.title}/>
+        )
+      case "sleep" :
+        return (
+          <Sleep title = {props.title} />
         )
       default: return <Text>{"hii komal"}</Text>
 

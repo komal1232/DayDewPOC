@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, TextInput, StyleSheet, Dimensions} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
-import { BORDER_COLOR } from '../utils/constants';
+import { BORDER_COLOR, BORDER_UNERLINE } from '../utils/constants';
 const screenWidth = Dimensions.get('screen').width;
 const screenHeight = Dimensions.get('screen').height;
 
@@ -24,7 +24,7 @@ const CheckBoxText = props => {
         style={{
           width: props.width - 60,
           borderBottomWidth: 1,
-           borderColor: '#D9D9D6',
+           borderColor: BORDER_UNERLINE,
           //borderColor: 'black',
           borderStyle: 'solid',
         }}>

@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import DatePicker from 'react-native-date-picker';
 import CalendarPicker from 'react-native-calendar-picker';
+import { TEXT_FONT_STYLE } from '../utils/constants';
 const weekday = [
   'Sunday',
   'Monday',
@@ -25,10 +26,10 @@ const DateComp = prop => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.dayCon} onPress={() => setOpen(true)}>
-        <Text style={{fontSize: 20}}>{weekday.at(date.getDay())}</Text>
+        <Text style={styles.text}>{weekday.at(date.getDay())}</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => setOpen(true)} style={styles.dateCon}>
-        <Text style={{fontSize: 20}}>
+        <Text style={styles.text}>
           {' '}
           {`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}
         </Text>
@@ -57,6 +58,12 @@ const DateComp = prop => {
 };
 
 const styles = StyleSheet.create({
+  text:{
+    fontStyle: TEXT_FONT_STYLE,
+    fontSize: 20
+  },
+
+
   container: {
     marginHorizontal: 20,
   },

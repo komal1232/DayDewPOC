@@ -4,6 +4,7 @@ import DropLet from '../svgComp/DropLet';
 import Drop from './Drop';
 import PlusIcon from '../svgComp/PlusIcon';
 import Minus from '../svgComp/Minus';
+import { TEXT_FONT_STYLE } from '../utils/constants';
 
 const WaterBox = prop => {
   const renderDrops = () => {
@@ -40,6 +41,7 @@ const styles = StyleSheet.create({
   },
   title: {
     alignSelf: 'center',
+    fontStyle:TEXT_FONT_STYLE
   },
 });
 
