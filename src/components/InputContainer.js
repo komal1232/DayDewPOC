@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View,Text} from 'react-native';
 import Input from './Input';
-import { BORDER_COLOR } from '../utils/constants';
+import { BACKGROUND_COLOR, BORDER_COLOR } from '../utils/constants';
 
 const InputContainer = prop => {
   return (
@@ -9,7 +9,7 @@ const InputContainer = prop => {
        <Input title ="To Do List" type = "inputBox"/>
       <View style={styles.inputRow}>
         <Input title ="Be Healthy" showPLus ={false}/>
-        <Input  title ="SLEEP BETTER" showPLus ={false} type = "sleep"/>
+        <Input  title ="Sleep Better" showPLus ={false} type = "sleep"/>
       </View>
         <Input title ="Priority" />
         <Input title = "How's your day!!" type ={"notes"}/>
@@ -27,7 +27,7 @@ const InputContainer = prop => {
         <Input  title ="Personal" showPLus ={false}/>
         </View>
         <Input title = "Remember This for Tommorow" type ={"notes"}/>
-        <View style={{height:100, backgroundColor: BORDER_COLOR, alignItems:'center'}} />
+        <View style={{height:30, backgroundColor: BACKGROUND_COLOR, alignItems:'center'}} />
     </>
   );
 };

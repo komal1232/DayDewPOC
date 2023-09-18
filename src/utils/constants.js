@@ -49,3 +49,4 @@ export const FOOD_TEXT_COLOR = "white" ;
 export const BORDER_UNERLINE ='#d9d9d5'
 export const FOOD_TEXT_BACKGROUND = '#49015B'
 export const TEXT_FONT_STYLE ='normal'
+export const PLUS_ICON_COLOR ='#F8E0FF'

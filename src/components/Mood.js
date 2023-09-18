@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   moodStyle: {
-    margin: 2.5,
+    margin: 2.8,
     opacity:0.3
   },
 });

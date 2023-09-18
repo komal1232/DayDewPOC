@@ -105,7 +105,17 @@ const styles = StyleSheet.create({
     padding: INPUT_CONTAINER_PADDING,
     borderWidth: 2,
     borderColor: BORDER_COLOR,  //#095561
-    flex:1
+    flex:1,
+
+    //ROUGHT BORDER
+    // borderWidth: 1,
+    // borderColor: BORDER_COLOR,
+    //transform: [{ rotate: '0.5deg' }],
+   // shadowColor: '#000',
+    //shadowOffset: { width: -2, height: -2 },
+    //shadowOpacity: 0.8,
+    //shadowRadius: 3,
+    //ROUGHT BORDER
   },
 });
 

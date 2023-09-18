@@ -114,6 +114,10 @@ const styles = StyleSheet.create({
   snackHeading: {
     marginTop: -10,
     alignSelf: 'center',
+    // height:20,
+    // width:70,
+    // borderRadius:10,
+    // borderWidth:1,
     // backgroundColor: 'black',
     backgroundColor: FOOD_TEXT_BACKGROUND,
     color: FOOD_TEXT_COLOR,
