@@ -9,9 +9,6 @@ const Notes = (props)=>{
         <Text style={{fontStyle:TEXT_FONT_STYLE}}>{props.title}</Text>
     </View>
     <TextInput style ={{flexWrap:'wrap',textDecorationLine :'underline', textDecorationColor:BORDER_UNERLINE}}  multiline={true}/>
-    {/* <View style={styles.underline}/>
-    <View style={styles.underline}/>
-    <View style={styles.underline}/> */}
     </>
     )
 }

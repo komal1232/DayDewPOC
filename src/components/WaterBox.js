@@ -1,10 +1,7 @@
-import React, {useState} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import DropLet from '../svgComp/DropLet';
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import Drop from './Drop';
-import PlusIcon from '../svgComp/PlusIcon';
-import Minus from '../svgComp/Minus';
-import { TEXT_FONT_STYLE } from '../utils/constants';
+import {TEXT_FONT_STYLE} from '../utils/constants';
 
 const WaterBox = prop => {
   const renderDrops = () => {
@@ -13,7 +10,6 @@ const WaterBox = prop => {
       box.push(<Drop key={i} />);
     }
     return box;
-    //)
   };
   return (
     <View style={styles.container}>
@@ -35,13 +31,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     marginHorizontal: 10,
   },
-  plusIcon: {
-    // flex:1
-    //justifyContent:''
-  },
   title: {
     alignSelf: 'center',
-    fontStyle:TEXT_FONT_STYLE
+    fontStyle: TEXT_FONT_STYLE,
   },
 });
 

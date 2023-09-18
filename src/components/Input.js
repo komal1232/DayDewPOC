@@ -2,26 +2,16 @@ import React, {useState} from 'react';
 import {
   View,
   Text,
-  TextInput,
   StyleSheet,
   Dimensions,
-  TouchableOpacity,
-  ScrollView,
 } from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
-import CheckBoxText from './CheckBoxText';
 import {
   INPUT_CONTAINER_MARGIN,
   INPUT_CONTAINER_PADDING,
-  APP_CONTAINER_MARGIN_HORIZONTAL,
   BORDER_COLOR,
   INPUT_BACKGROUND_COLOR,
 } from '../utils/constants';
-import PlusIcon from '../svgComp/PlusIcon';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import InputBox from './Inputbox';
-import WaterDrop from '../svgComp/WaterDrop';
-import DropLet from '../svgComp/DropLet';
 import WaterBox from './WaterBox';
 const screenWidth = Dimensions.get('screen').width;
 
@@ -30,10 +20,6 @@ import Food from './Food';
 import Notes from './Notes';
 import Habbit from './Habbit';
 import Sleep from './Sleep';
-import { Path, Svg } from 'react-native-svg';
-// const screenHeight = Dimensions.get('screen').height;
-// const windowWidth = Dimensions.get('window').width;
-// const windowHeight = Dimensions.get('window').height;
 
 const Input = props => {
   const [componentDimensions, setComponentDimensions] = useState({
@@ -73,7 +59,7 @@ const Input = props => {
         return (
           <Notes title={props.title}/>
         )
-      case "edit":
+      case "habit":
         return (
           <Habbit showPLus ={props.showPLus}  height={componentDimensions.height}
           width={componentDimensions.width} title ={props.title}/>
@@ -82,7 +68,7 @@ const Input = props => {
         return (
           <Sleep title = {props.title} />
         )
-      default: return <Text>{"hii komal"}</Text>
+      default: return <Text>{"Something went wrong"}</Text>
 
     }
   }
@@ -94,11 +80,7 @@ const Input = props => {
   );
 };
 const styles = StyleSheet.create({
-  container: {
-    // width:
-    //   screenWidth -
-    //   2 * APP_CONTAINER_MARGIN_HORIZONTAL -
-    //   2 * INPUT_CONTAINER_MARGIN, 
+  container: { 
     backgroundColor: INPUT_BACKGROUND_COLOR,  //'#F8FEFF
     borderRadius: 3,
     margin: INPUT_CONTAINER_MARGIN,

@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import DatePicker from "react-native-date-picker";
 import TextTime from "./TextTime";
 import { TEXT_FONT_STYLE } from "../utils/constants";
 

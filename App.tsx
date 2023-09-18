@@ -16,33 +16,26 @@ import Star from './src/svgComp/Start';
 
 function App(): JSX.Element {
   return (
-      <View style={styles.container}>
-        <SafeAreaView /*style={{display:'flex'}} */ >
-          <DateComp />
-          <KeyboardAwareScrollView
-            // keyboardVerticalOffset={40}
-            //behavior={"padding"}
-            //contentContainerStyle={{ flexGrow: 1 }}
-            style={styles.keybord}
-           > 
-         <InputContainer />
-          </KeyboardAwareScrollView>
-          <TouchableOpacity 
+    <View style={styles.container}>
+      <SafeAreaView /*style={{display:'flex'}} */ >
+        <DateComp />
+        <KeyboardAwareScrollView
+          style={styles.keybord}
+        >
+          <InputContainer />
+        </KeyboardAwareScrollView>
+        <TouchableOpacity
           style={styles.plusIcon}
-          >
-          <PlusIcon height={20} width={20}  />
-          </TouchableOpacity>
-        </SafeAreaView>
+        >
+          <PlusIcon height={20} width={20} />
+        </TouchableOpacity>
+      </SafeAreaView>
 
-      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  inputRow: {
-    display: 'flex',
-    flexDirection: 'row'
-  },
   container: {
     //marginTop: APP_CONTAINER_MARGIN_TOP,
     //marginHorizontal: APP_CONTAINER_MARGIN_HORIZONTAL,
