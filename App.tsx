@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import { StyleSheet, View, SafeAreaView, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, SafeAreaView, TouchableOpacity, Dimensions, ImageBackground } from 'react-native';
 import DateComp from './src/components/DateComp';
 import InputContainer from './src/components/InputContainer'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -20,6 +20,7 @@ function App(): JSX.Element {
       <SafeAreaView /*style={{display:'flex'}} */ >
         <DateComp />
         <KeyboardAwareScrollView
+        extraScrollHeight={30}
           style={styles.keybord}
         >
           <InputContainer />
@@ -60,6 +61,12 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowColor: '#000',
     shadowOffset: { height: 10, width: 5 },
+  },
+  star:{
+    position: 'absolute',
+    bottom: 90,
+    left: 30,
+    opacity:0.5
   }
 });
 

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {
+  Alert,
   Button,
   Modal,
   StyleSheet,
@@ -41,7 +42,19 @@ const DateComp = prop => {
         date={date}
         onConfirm={date => {
           setOpen(false);
+          if(date <= new Date())
           setDate(date);
+        else{
+          Alert.alert(
+          "Invalid Date",
+          "Date should not be greater than todate",
+          [{
+            text:"OK", 
+
+          }],
+          //{cancelable: false}   
+          )
+        }
         }}
         onCancel={() => {
           setOpen(false);
