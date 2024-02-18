@@ -11,6 +11,7 @@ const InputContainer = prop => {
         <Input title="Be Healthy" showPLus={false} />
         <Input title="Sleep Better" showPLus={false} type="sleep" />
       </View>
+      <Input title="Shopping List" type="shopping" />
       <Input title="Priority" />
       <Input title="How's your day!!" type={'notes'} />
 
