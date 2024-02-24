@@ -1,3 +1,13 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES5",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "jsx": "react",
+  "paths": {
+    // this allows sub-package imports from src; fx. '@nozbe/watermelondb/decorators'
+    "@nozbe/watermelondb/*": ["../../src/*"]
+  }
 }
